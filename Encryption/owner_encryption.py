@@ -194,9 +194,9 @@ def generate_keys(img, control_length=256 * 284):
     # secret keys
     data_lenY = np.ones([1, int(control_length)])
 
-    keyY = generate_hash(img[:, :, 0])
-    keyCb = generate_hash(img[:, :, 0])
-    keyCr = generate_hash(img[:, :, 0])
+    keyY = generate_hash(img)
+    keyCb = generate_hash(img)
+    keyCr = generate_hash(img)
     hash_len=len(keyY)
     hashKeys = np.zeros(3*hash_len,dtype=np.int32)
     hashKeys[0:hash_len]=keyY
